@@ -3,10 +3,47 @@ header h1{
     font-family: 'Shrikhand', cursive;
 }
 
-*{
+body{
     box-sizing: border-box;
 }
 
 div{
-    border:1px solid black;
+    background-color: rgb(219, 219, 219);
+    box-shadow: 0 2px 5px 0 gray;
+    border-radius:30px;
 }
+
+li{
+    display: flex;
+    border:1px solid black;
+    list-style:none;
+    border-radius: 14px;
+}
+
+ul{
+    padding:0;
+}
+
+.num{
+    background-color: #9356DC;
+    border:1px solid #9356DC;
+    border-radius: 50px;
+    color:white;
+    padding:3px 7px;
+}
+
+.btn{
+    border-radius: 30px;
+    border:none;
+    padding:20px;
+    color:white;
+    box-shadow: 0 3px 8px 0 grey ;
+}
+
+.btn-grad{
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  }
+
+
+
+/*#9356DC #FF79DA #99E2D0*/
