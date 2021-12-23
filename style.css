@@ -13,16 +13,6 @@ p{
     text-decoration: none;
 }
 
-body{
-    max-width: 900px;
-    margin:auto;
-    
-}
-
-.main{
-    background-color: cadetblue;
-}
-
 a{
     color: black;
 }
@@ -31,8 +21,45 @@ img{
     width:300px;
 }
 
-@media screen {
-    
+@media screen and (max-width:375px){
+    body{
+        margin:0;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    form{
+        background-color:#f6f6f6;
+    }
+
+    strong{
+        font-weight:900;
+    }
+
+    input[type="search"]{
+        background-color: #eaeaea;
+        width:100%;
+        border:none;
+        padding:5%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    figure{
+        margin:0
+    }
+
+    .menu{
+        background-color:#f6f6f6;
+    }
+
+    ul{
+        padding: 0;
+    }
 }
 
 
