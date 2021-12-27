@@ -1,64 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
-header h1{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;900&family=Shrikhand&display=swap');
+h1{
     font-family: 'Shrikhand', cursive;
 }
 
-p{
+p, h2{
     font-family: 'Roboto', sans-serif;
 }
 
 *{
     box-sizing: border-box;
-    list-style-type: none;
     text-decoration: none;
+    list-style: none;
+}
+body{
+    margin: 0;
+    padding:0;
 }
 
 a{
     color: black;
 }
 
-img{
-    width:300px;
+.block-header p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width:375px){
+.header-img img{
+    width:100%;
+    height: 250px;
+}
+
+.arrow{
+    display: none;
+}
+
+.icon-header{
+    margin: 0px 60px 0 -43px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#f6f6f6;
+    padding-bottom: 54px;
+    text-align: center;
+}
+
+form p{
+    font-size: 19px;
+}
+
+.formulaire{
+    background-color: #eaeaea;
+    padding:5%;
+    margin:0;
+    box-shadow:inset 0px 2px 4px #c4c4c4;
+    text-align: center;
+}
+
+input {
+    border: none;
+    font-size: 1em;
+    background-color: #eaeaea;
+    text-align: center;
+    width:45%;
+}
+
+.btn{
+     border-radius: 25px;
+     color: white;
+     box-shadow:1px 2px 5px grey;
+     font-size: 1em;
+     padding:15px;
+     background-image:linear-gradient(172deg, #FF79DA, #9356DC);
+     width:54%;
+     margin: 10% auto 0;
+ }
+
+.fonctionnement{
+    margin:5% 5% 15%;
+}
+
+li{
+    border-radius: 15px;
+    margin:6% auto;
+    padding:10px;
+}
+
+.shadow{
+    box-shadow:0px 3px 10px 4px #eaeaea;
+}
+
+.fonctionnement li{
+    background-color: #f6f6f6;
+    width:95%;
+    font-weight: bold;
+}
+
+.fonctionnement li:hover{
+    background-color: #f5edff;
+    border-radius: 15px;
+    box-shadow:0px 3px 10px 4px #eaeaea;
+    margin:7% auto;
+    padding:10px;
+    width:95%;
+    font-weight: bold;
+}
+
+.num{
+    background-color: #9356DC;
+    border-radius: 25px;
+    padding:1% 2.5%;
+    color:white;
+    margin:0 -22px;
+    font-weight: bold;
+}
+
+.icon{
+    margin: 0 6% 0 14%;
+    color:#8b8b8b;
+}
+
+.icon:hover{
+    margin: 0 6% 0 14%;
+    color:#9356DC;
+}
+
+#menu img{
+    width:100%;
+    height:190px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+#menu{
+    background-color: #f6f6f6;
+    padding:5% 5% 40px 5%;
+}
+
+ul{
+    padding:0;
+}
+#menu li{
+    background-color: white;
+    margin:5% 0;
+    position:relative
+}
+
+.menu{
+    border-radius:25px;
+    padding-top:0
+}
+
+figure{
+    margin:0;
+}
+
+p.news{
+    background-color: #99E2D0;
+    color:green;
+    width: 70px;
+    position:absolute;
+    left:256px;
+    font-weight: bold;
+    padding:5px;
+}
+
+figcaption p, figcaption h2{
+    margin:0;
+}
+
+figcaption{
+    padding:2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+figcaption h2{
+    width:90%;
+}
+
+.far.fa-heart{
+    font-size: 1.7em;
+    animation-name:fullHeart;
+    /*animation-duration: 4s;*/
+    animation-delay:2s;
+}
+
+
+@keyframes fullHeart{
+    from{background-image: white;}
+    to{background-image:linear-gradient(172deg, #FF79DA, #9356DC);}
+ }
+
+footer{
+    background-color: #353535;
+    color:white;
+    padding:2% 6%;
+}
+
+footer h1{
+    font-size: 1em;
+}
+footer a{
+    color:white;
+}
+footer li{
+    background-color: #353535;
+    line-height: 2;
+}
+.icon-footer{
+    margin:0 2%;
+}
+
+@media screen and (min-width:768px){
     body{
-        margin:0;
-    }
-
-    p{
-        text-align: center;
-    }
-
-    form{
-        background-color:#f6f6f6;
-    }
-
-    strong{
-        font-weight:900;
-    }
-
-    input[type="search"]{
-        background-color: #eaeaea;
-        width:100%;
-        border:none;
-        padding:5%;
+        width:1200px;
+        margin:auto;
+        border:1px solid black;
     }
     main{
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
-    figure{
-        margin:0
+    header, form, section{
+        width:100%;
     }
 
-    .menu{
-        background-color:#f6f6f6;
-    }
-
-    ul{
-        padding: 0;
+    .fonctionnement{
+        display: none;
     }
 }
 
