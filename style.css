@@ -315,23 +315,47 @@ footer li{
 
     header{
         width:100%;
-        padding:5%;
+        padding:3%;
     }
-
-    .formulaire{
-        display: flex;
-        flex-direction: column;
+    input{
+        width:15%;
     }
-
     .header-map{               /*pour un format desktop*/
         display:flex;
     }
 
     .function, form{
-        width:50%
+        width:100%;
     }
 
-    .function{
+    .function {
+        margin: 2%;
+    }
+
+    .btn{
+        width:20%;
+    }
+
+    .function ul{
+        flex-wrap: nowrap;   
+    }
+
+    .function li{
+        margin: 2% auto;
+        width: 22%;
+    }
+
+    .function li:hover{
+        margin: 2% auto;
+        width: 22%;
+    }
+
+    .icon-function{
+        display: none;
+        
+    }
+
+    .num{
         margin:0;
     }
 
@@ -350,7 +374,20 @@ footer li{
     .cards {
         background-color: #f6f6f6;
         padding: 5% 5% 40px 5%;
-        margin: 5% 0;
+        margin:0;
+    }
+
+
+    /* mettre l icon en caché et visible au passage de la sourie*/
+
+    .icon-up:hover{
+        visibility: visible;
+        justify-content: center;
+        border-bottom: 2px solid #8b8b8b;
+        width:25px;
+        margin:auto;
+        padding-top:17px;
+        color:#8b8b8b;
     }
 
     
