@@ -4,7 +4,7 @@ h1{
     font-family: 'Shrikhand', cursive;
 }
 
-.accueil h1, p, h2, h3{
+.accueil h1, p, h2, h3, footer{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -17,6 +17,10 @@ h1{
 body{
     margin: 0;
     padding:0;
+}
+
+.demo-load{
+    padding:0
 }
 
 figure{
@@ -48,7 +52,7 @@ ul{
     height: 250px;
 }
 
-.arrow{                     /*peut etre enlever l icon sur la page d accueil*/
+.arrow{                     
     display: none;
 }
 
@@ -66,10 +70,14 @@ form{
     justify-content: center;
     background-color:#f6f6f6;
     padding-bottom: 54px;
+    
+}
+
+header form{
     text-align: center;
 }
 
-form p{
+header form p{
     font-size: 19px;
 }
 
@@ -102,13 +110,25 @@ input {
 .btn{
      border-radius: 25px;
      color: white;
-     box-shadow:1px 2px 5px grey;
+     box-shadow:1px 2px 5px #a1a1a1;
      font-size: 1em;
      padding:15px;
      background-image:linear-gradient(172deg, #FF79DA, #9356DC);
      width:54%;
      margin: 3% auto 0;
  }
+
+ .btn:hover{
+    border-radius: 25px;
+    color: white;
+    box-shadow:2px 3px 6px #9b9b9b;
+    font-size: 1em;
+    padding:15px;
+    background-image:linear-gradient(172deg, #fd82da, #ab80df);
+    width:54%;
+    margin: 3% auto 0;
+}
+
 
 .function{
     margin:12% 5% 15%;
@@ -144,6 +164,7 @@ input {
 .icon-function{
     margin: 0 6% 0 14%;
     color:#8b8b8b;
+    
 }
 
 .icon-function:hover{
@@ -167,6 +188,10 @@ input {
     background-color: white;
     position:relative;
     margin:6% auto;
+}
+
+.cards h2{
+    font-size: 1.1em;
 }
 
 p.news {
@@ -210,49 +235,107 @@ p.news {
     border-bottom: 3px solid #99E2D0;
     width: 45px;
     margin: 9px 0 0px;
-    font-weight: 300;
-    font-size: 1.1em;
 }
 
-#menu li {
-    padding: 0 18px 0 13px;
+div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    padding: 7.7px 0 7.7px 11px;
+}
+
+#menu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #menu h3 {
-    width: 100%;
-    margin: 10px 0 0;
-    font-size: 1.5em;
+    margin:0;
+    font-size: 17px;
     font-weight: 400;
 }
 
 #menu p {
-    margin-top: 0;
-    font-size: 1.1em;
-    font-weight: 300;
+    font-weight: 100;
+    font-size: 15px;
+    margin:0;
+    line-height: 2;
+    border:1px solid black;
 }
+
+p.para{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 229px;
+}
+
+p.check {
+    transition: 0.5s;
+}
+
+.icon-check{
+    transition: 0.5s;
+    opacity:0;
+    color: #99E2D0;
+}
+
+p.check:hover {
+    padding:6.1% 4%;
+    color: #99E2D0;
+    border-radius: 0 15px 15px 0;
+    background-color: #99E2D0;
+}
+
+.icon-check:hover {
+    opacity: 1;
+    background-color: white;
+    border-radius: 11px;
+    padding: 4px;
+    transform: rotate(360deg);
+}
+
  #menu p.prix{
     font-weight: 400;
+    padding:0 4% 0 0;
+    width: 42px;
  }
+
 .icon-heart{
     position: absolute;
     left:286px;
     top:175px;
-}
-
-.icon-heart{
     font-size: 1.7em;
-    animation-name:fullHeart;
-    animation-duration: 4s;
+    font-weight: 100;
 }
 
-@keyframes fullHeart{
-    from{background-image: white;}
-    to{background-image:linear-gradient(172deg, #FF79DA, #9356DC);}
- }
+.heart-2{
+    opacity: 0;
+    position: relative;
+    top:-31px;
+}
 
+   /* background-image: linear-gradient(#9356DC, #FF79DA);*/
+
+.heart-2:hover{
+    opacity: 1;
+    position: relative;
+    top:-31px;
+}
+
+#menu .heart-2{
+    left: -57px;
+}
+
+#menu .heart-2:hover {
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: -57px;
+    
+}
 
 figcaption p, figcaption h2{
     margin:0;
@@ -283,6 +366,7 @@ footer{
     background-color: #353535;
     color:white;
     padding:2% 6%;
+    width:100%;
 }
 
 footer h1{
@@ -315,13 +399,26 @@ footer li{
 
     header{
         width:100%;
-        padding:3%;
+        padding:0;
     }
+
+    .block-header{
+        margin: 2% 0 0;
+    }
+    .block-header p{
+        margin-bottom:3%;
+    }
+
     input{
         width:15%;
     }
-    .header-map{               /*pour un format desktop*/
-        display:flex;
+
+    .btn{
+        width:20%;
+    }
+
+    .btn:hover{
+        width:20%;
     }
 
     .function, form{
@@ -330,10 +427,6 @@ footer li{
 
     .function {
         margin: 2%;
-    }
-
-    .btn{
-        width:20%;
     }
 
     .function ul{
@@ -364,33 +457,84 @@ footer li{
         flex-wrap: wrap;
     }
 
-    .cards li {
+    .menu-img img{
+        object-fit: cover;
+        height: 490px;
+    }
+
+    #resto li {
         background-color: white;
         position: relative;
         margin: 4% auto;
         width: 42%;
     }
 
-    .cards {
-        background-color: #f6f6f6;
-        padding: 5% 5% 40px 5%;
+    .cards li {
+        background-color:white;
+        margin:0;
+    }
+    .cards{
+        padding:0;
+        width: 100%;
+    }
+
+    #menu{
+        top:0;
+        border-radius: 0;
+        width: 100%;
+        padding-bottom: 5%;
+    }
+
+    .menu-img{
+        margin-bottom: 0;
+    }
+
+    #menu li.menu-titre {
+        width: 4%;
+    }
+
+    #menu li h2{
+        width:100%;
         margin:0;
     }
 
-
-    /* mettre l icon en caché et visible au passage de la sourie*/
-
-    .icon-up:hover{
-        visibility: visible;
-        justify-content: center;
-        border-bottom: 2px solid #8b8b8b;
-        width:25px;
-        margin:auto;
-        padding-top:17px;
-        color:#8b8b8b;
+    #menu li{
+        margin:2%;
+        background-color: white;
+        width:26%;
     }
 
-    
+    #menu h1{
+        padding:0 2%;
+    }
+
+    #resto h1 {
+        padding: 2% 2% 0;
+    }
+
+    p.news{
+        left:386px;
+    }
+
+    .icon-up{
+        display: none;
+    }
+
+    .icon-heart {
+        left: 418px;
+    }
+
+    footer{
+        width:100%;
+    }
+
+    footer ul{
+        flex-wrap: nowrap;
+    }
+
+    footer li{
+        width:100%;
+    }  
 }
 
 
