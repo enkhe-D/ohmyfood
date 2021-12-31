@@ -32,6 +32,55 @@ ul{
     padding:0;
 }
 
+
+.loader{
+    visibility:hidden;
+    width: 100%;
+    height:100%;
+    background-color:grey;
+    position:fixed;
+    z-index: 1;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation-name:loader;
+    animation-duration: 3s;
+}
+
+.spiner{
+    opacity: 1;
+    font-size: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #9356DC;
+    border-bottom: 16px solid #FF79DA;
+    border-radius:50%;
+    width: 120px;
+    height: 120px;
+    animation:spin 3s linear infinite;
+}
+
+@keyframes loader {
+    from{visibility: hidden;}
+    to{visibility: visible;}
+}
+
+
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+
+
 .border-style{
     border-radius: 15px;
     box-shadow:0px 3px 10px 4px #eaeaea;
@@ -96,7 +145,6 @@ input {
     font-size: 18px;
     background-color: #eaeaea;
     text-align: center;
-    width: 49%;
     padding: 15px;
 }
 
@@ -104,22 +152,12 @@ input {
      border-radius: 25px;
      color: white;
      box-shadow:1px 2px 5px #a1a1a1;
-     font-size: 18px;
-     padding:15px;
      background-image:linear-gradient(172deg, #FF79DA, #9356DC);
-     width:54%;
      margin: 3% auto 0;
  }
 
  .btn:hover{
-    border-radius: 25px;
-    color: white;
-    box-shadow:2px 3px 6px #9b9b9b;
-    font-size: 18px;
-    padding:15px;
-    background-image:linear-gradient(172deg, #fd82da, #ab80df);
-    width:54%;
-    margin: 3% auto 0;
+    opacity: 0.9;
 }
 
 
@@ -127,12 +165,15 @@ input {
     margin:12% 5% 15%;
 }
 
-.function li{
-    padding:10px;
+.function li {
+    padding: 10px;
     background-color: #f6f6f6;
-    width:95%;
+    width: 95%;
     font-weight: bold;
     margin: 7% auto;
+    color: #8b8b8b;
+    display: flex;
+    align-items: center;
 }
 
 .function li:hover{
@@ -143,10 +184,12 @@ input {
     padding:10px;
     width:95%;
     font-weight: bold;
+    color:#9356DC;
 }
 
 .function p{
     font-weight: 400;
+    color:black
 }
 
 .num{
@@ -159,13 +202,8 @@ input {
 
 .icon-function{
     margin: 0 6% 0 14%;
-    color:#8b8b8b;
-    
-}
 
-.icon-function:hover{
-    margin: 0 6% 0 14%;
-    color:#9356DC;
+    
 }
 
 h1{
@@ -208,9 +246,6 @@ p.news {
     border-radius: 3px;
 }
 
-#resto{
-    animation: loading 3s;
-}
 
 .para-lieu{
     font-weight: 100;
@@ -248,21 +283,14 @@ p.news {
     font-weight: 100;
 }
 
-#menu div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 7.7px 0 7.7px 11px;
-}
-
 #menu li{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.anim{
+/*.anim{
     animation-name:plat;
     animation-duration: 2s;
     animation-timing-function:ease-in;
@@ -289,7 +317,7 @@ p.news {
         transform: scaleY(1);
     }
 }
-
+*/
 
 #menu h3 {
     margin:0;
@@ -301,8 +329,6 @@ p.news {
 #menu p {
     font-weight: 100;
     margin:0;
-    line-height: 2;
-   /* border:1px solid black;*/
 }
 
 #menu p.prix{
@@ -324,7 +350,7 @@ p.check {
     animation-duration: 4s;
 }
 
-p.check:hover {
+p.check {
     width:20%;
     padding:6.1% 4%;
     color: #99E2D0;
@@ -359,23 +385,40 @@ p.check:hover {
 #menu .icon-heart {
     top: 53px;
     left: 84%;
+    
 }
 
-.heart-2{
-    opacity: 0;
-    position: relative;
-    right:27px;
-    transition: 1s;
-}
-
-.heart-2:hover{/* enlever la bordure noir du coeur*/
-    opacity: 1;
-    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+.heart-full:hover{
+    font-weight: 600;
+    transition:1s;
+    background:linear-gradient(to bottom, #9356DC, #FF79DA);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+/*.heart-2 {
+    position: relative;
+    right: 26.7px;
+    transition: 1s;
+    top: 0.3px;
+    color: white;
+    font-size: 26.1px;
+}
+
+.heart-2:hover {
+    right: 29px;
+    transition: 1s;
+    top: -2.6px;
+    color: white;
+    font-size: 30px;
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px solid;
+}
+*/
 
 figcaption p, figcaption h2{
     margin:0;
