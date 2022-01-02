@@ -434,7 +434,6 @@ p.para{
     font-size: 28px;
     margin: 0;
     width: 29px;
-    transition:color 1s;
 }
 
 #menu .icon-heart {
@@ -444,6 +443,7 @@ p.para{
 }
 
 .heart-full:hover{
+    transition:300ms ease-in;
     font-weight: 600;
     background:linear-gradient(to bottom, #9356DC, #FF79DA);
     -webkit-background-clip: text;
@@ -547,6 +547,10 @@ footer li{
         flex-wrap: nowrap;   
     }
 
+    .function p {
+        padding-left: 14%;
+    }
+
     .function li{
         margin: 2% auto;
         width: 22%;
@@ -563,7 +567,7 @@ footer li{
     }
 
     .num{
-        margin:0;
+        margin:-23px;
     }
 
     ul{
@@ -588,6 +592,10 @@ footer li{
         width: 100%;
     }
 
+    .cards img{
+        height: 290px;
+    }
+
     #menu{
         top:0;
         border-radius: 0;
@@ -605,6 +613,7 @@ footer li{
 
     #menu li.menu-titre {
         width: 4%;
+        margin:2%;
     }
 
     #menu li h2{
@@ -612,8 +621,8 @@ footer li{
         margin:0;
     }
 
-    #menu li{
-        margin:2%;
+    #menu .anim{
+        margin:2% auto;
         background-color: white;
         width:338px;
     }
@@ -627,7 +636,7 @@ footer li{
     }
 
     p.news{
-        left:386px;
+        left:82%;
     }
 
     .icon-up{
@@ -635,7 +644,12 @@ footer li{
     }
 
     .icon-heart {
-        left: 418px;
+        left: 90%;
+        top:82%;
+    }
+
+    #menu .icon-heart {
+        left: 91.5%;
     }
 
     footer{
