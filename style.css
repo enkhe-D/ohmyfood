@@ -350,7 +350,7 @@ p.check:hover {
 }
 
 .animation-1{
-    animation-name: plat;
+    animation-name: plat 1s ;
     animation-duration: 1s;
     transform-origin: top;
     animation-timing-function:linear;
@@ -384,11 +384,10 @@ p.check:hover {
     }
 }
 
-/*.anim {
-    animation-name: plat;
-    animation-duration: 1s;
+.anim {
+    animation: plat 1s ease-in;
     transform-origin: top;
-    animation-timing-function: ease-in;
+   
 }
 
 @keyframes plat{
@@ -400,8 +399,7 @@ p.check:hover {
     100% {
         transform: scaleY(1);
     }
-}*/
-
+}
 
 #menu h3 {
     margin:0;
@@ -504,9 +502,11 @@ footer li{
     margin:0 2%;
 }
 
+/**************************MÉDIA*************************************************/
+
 @media screen and (min-width:992px){
     body{
-        width:1200px;
+        width:75%;
         margin:auto;
         border:1px solid black;
     }
@@ -595,6 +595,10 @@ footer li{
         padding-bottom: 5%;
     }
 
+    #menu ul{
+        width: 100%;
+    }
+
     .menu-img{
         margin-bottom: 0;
     }
@@ -611,7 +615,7 @@ footer li{
     #menu li{
         margin:2%;
         background-color: white;
-        width:29%;
+        width:338px;
     }
 
     #menu h1{
@@ -646,6 +650,9 @@ footer li{
         width:100%;
     }  
 }
+
+
+
 
 
 /*#9356DC #FF79DA #99E2D0*/
