@@ -54,7 +54,6 @@ ul{
 }
 
 .spiner{
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +63,7 @@ ul{
     border-radius:50%;
     width: 120px;
     height: 120px;
-    animation:spin 1s linear infinite;
+    animation:spin 200ms linear infinite;
 }
 
 .fa-hamburger {
@@ -78,8 +77,12 @@ ul{
 }
 
 @keyframes loader {
-    from{visibility: hidden;}
-    to{visibility: visible;}
+    from{
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
+    }
 }
 
 
@@ -112,6 +115,7 @@ ul{
 .menu-img img{
     width:100%;
     height: 250px;
+    object-fit: cover;
 }
 
 .arrow{                     
@@ -300,10 +304,6 @@ p.news {
     align-items: center;
 }
 
-#menu .anim:hover{
-    color:#99E2D0
-}
-
 div {
     display: flex;
     flex-wrap: wrap;
@@ -317,8 +317,6 @@ p.check{
     transition: 1s;
     padding:6.1% 0%;
 }
-
-
 
 p.check:hover {
     opacity: 1;
@@ -350,7 +348,8 @@ p.check:hover {
 }
 
 .animation-1{
-    animation-name: plat 1s ;
+    animation-name: plat;
+    transition: 1s;
     animation-duration: 1s;
     transform-origin: top;
     animation-timing-function:linear;
@@ -385,15 +384,13 @@ p.check:hover {
 }
 
 .anim {
-    animation: plat 1s ease-in;
+    animation: plat 600ms ease-in;
     transform-origin: top;
-   
 }
 
 @keyframes plat{
     0% {
         transform: scaleY(0);
-        opacity: .1;
     }
 
     100% {
@@ -467,14 +464,14 @@ figcaption h2{
     width:90%;
 }
 
-.icon-up{
+.icon-up {
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid #8b8b8b;
-    width:25px;
-    margin:auto;
-    padding-top:17px;
-    color:#8b8b8b;
+    border-bottom: 2px solid #dbdbdb;
+    width: 25px;
+    margin: 9% auto;
+    padding-top: 17px;
+    color: #dbdbdb;
 }
 
 footer{
@@ -515,6 +512,10 @@ footer li{
         flex-wrap: wrap;
     }
 
+    .fa-hamburger{
+        top:40%;
+    }
+
     header{
         width:100%;
         padding:0;
@@ -523,6 +524,7 @@ footer li{
     .block-header{
         margin: 2% 0 0; 
     }
+    
     .block-header p{
         margin-bottom:3%; /*confli entre p menu et p accueil*/
     }
@@ -663,6 +665,38 @@ footer li{
     footer li{
         width:100%;
     }  
+}
+
+@media screen and (max-width:992px){
+    .fa-hamburger{
+        top: 40%;
+    }
+
+    .function li{
+        width:44%;
+    }
+    .menu-img img{
+        height: 348px;
+    }
+    .icon-heart{
+        left:91%;
+    }
+
+    p.news{
+        left:84%;
+    }
+
+    .icon-up{
+        display: none;
+    }
+
+    .anim {
+        width: 54%;
+    }
+
+    #menu .btn{
+        margin-bottom: 10%;
+    }
 }
 
 
