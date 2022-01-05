@@ -301,7 +301,6 @@ p.news {
 #menu li{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 
@@ -349,7 +348,7 @@ p.check:hover {
     transform: rotate(360deg);
 }*/
 
-.animation-1{
+.animation{
     animation-name: plat;
     transition: 1s;
     animation-duration: 1s;
@@ -357,7 +356,7 @@ p.check:hover {
     animation-timing-function:linear;
 }
 
-.animation-2{
+/*.animation-2{
     animation-name: plat;
     animation-delay: 1s;
     animation-duration: 1s;
@@ -371,7 +370,7 @@ p.check:hover {
     animation-duration: 1s;
     transform-origin: top;
     animation-timing-function:linear;
-}
+}*/
 
 
 @keyframes plat{
@@ -415,22 +414,42 @@ p.check:hover {
 
 }
 
-.menu-text{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 90%;
-    padding:6px 8px;
-    flex-grow: 1;
+.menu .text{
+    padding:6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.icon-check{
-    border:1px solid black;
+.menu .text:hover{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.menu .prix{
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu .prix:hover{
+    flex-grow:1;
+    transition:0.5s;
+}
+
+.menu .check{
+    opacity: 0;
     display: flex;
     align-items: center;
+    border:1px solid black;
     border-radius: 0 5px 5px 0;
-    flex-grow: 0;
+    color:#99E2D0;
     background-color: #99E2D0;
+ }
+
+.menu .check:hover{
+    opacity: 1;
  }
 
  .fa-check{
@@ -439,14 +458,6 @@ p.check:hover {
     padding:4px;
     background-color: white;
  }
-
-.menu-text p.para{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 90%;
-    padding:1%;
-}
 
 #menu .icon-heart {
     top: 53px;
