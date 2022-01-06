@@ -189,7 +189,6 @@ input {
 .function li {
     padding: 10px;
     background-color: #f6f6f6;
-    width: 95%;
     font-weight: bold;
     margin: 7% auto;
     color: #8b8b8b;
@@ -401,7 +400,6 @@ p.check:hover {
 
 
 #menu p {
-    font-weight: 100;
     margin:0;
 }
 
@@ -422,6 +420,7 @@ p.check:hover {
 
 .para{
     width: 213px;
+    font-weight: 100;
     font-size: 15px;
     white-space: nowrap;
     overflow: hidden;
@@ -523,7 +522,7 @@ footer{
 
 .menu-footer{
     position:absolute;
-    top:200%;
+    top:289%;
 }
 
 footer h1{
@@ -717,7 +716,7 @@ footer li{
     }
 
     .menu-footer {
-        top: 355%;
+        position: relative;
     }
 
     footer ul{
