@@ -34,19 +34,18 @@ ul{
 
 
 .loader{
-    visibility:hidden;
+    visibility:visible;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image:linear-gradient(#9356dc, #ff79da);
+    background-image:linear-gradient(#9356dcbd, #ff79dac7);
     position:fixed;
     z-index: 1;
     top:0;
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: 0.9;
     animation-name:loader;
     animation-duration: 1s;
 }
@@ -68,10 +67,15 @@ ul{
     font-size: 52px;
     position: absolute;
     top: 39%;
-    background: linear-gradient(to bottom, #7e511b 43%, #662f2f 70%, #7e511b 43%);
+    background: linear-gradient(to bottom, #f59e35 43%, #662f2f 70%, #f59e35 43%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.load-text{
+    font-size: 29px;
+    color:whitesmoke
 }
 
 @keyframes loader {
@@ -266,7 +270,7 @@ p.news {
 
 #menu {
     position: relative;
-    top: -79px;
+    top: -67px;
     border-radius:25px 25px 0 0;
     padding-bottom:0;
     display: flex;
@@ -300,93 +304,23 @@ p.news {
     justify-content: space-between;
 }
 
-
-/*div {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0px 10px 9px;
-    color: black;
-    border:1px solid black;
-}*/
-
-/*p.check{
-    opacity: 1;
-    transition: 1s;
-    padding:6.1% 0%;
-    position: relative;
-}
-
-p.check:hover {
-    opacity: 1;
-    padding:6.1% 5%;
-    border-radius: 0 15px 15px 0;
-    background-color: #99E2D0;
-    transform: scaleX(1);
-    transform-origin: 50% 0%;
-}*/
-
-/*.icon-check{
-    background-color: white;
-    color:#99E2D0;
-    border-radius: 11px;
-    padding: 4px;
-    border:1px solid black;
-    transition: 1s;
-    transform: rotate(150deg);
-}
-
-.icon-check:hover{
-    opacity: 1;
-    background-color: white;
-    color:#99E2D0;
-    border-radius: 11px;
-    padding: 4px;
-    border:1px solid black;
-    transform: rotate(360deg);
-}*/
-
-.animation{
-    animation-name: plat;
-    transition: 1s;
-    animation-duration: 1s;
+.menu-1{
     transform-origin: bottom;
-    animation-timing-function:linear;
+    animation: animation-plat 1.5s ease-in;
 }
 
-/*.animation-2{
-    animation-name: plat;
-    animation-delay: 1s;
-    animation-duration: 1s;
-    transform-origin: top;
-    animation-timing-function:linear;
+.menu-2{
+    transform-origin: bottom;
+    animation: animation-plat 1s ease-in;
 }
 
-.animation-3{
-    animation-name: plat;
-    animation-delay: 2s;
-    animation-duration: 1s;
-    transform-origin: top;
-    animation-timing-function:linear;
-}*/
-
-
-@keyframes plat{
-    from{
-        transform: scaleY(0);
-        opacity: 0;
-    }
-    to{
-        transform: scaleY(1);
-        opacity: 1;
-    }
+.menu-3{
+    transform-origin: bottom;
+    animation: animation-plat 0.5s ease-in;
 }
 
-/*.anim {
-    animation: plat 600ms ease-in;
-    transform-origin: top;
-}
 
-@keyframes plat{
+@keyframes animation-plat{
     0% {
         transform: scaleY(0);
     }
@@ -394,9 +328,23 @@ p.check:hover {
     100% {
         transform: scaleY(1);
     }
+}
+
+/*.animation{
+    transform-origin: 50% bottom;
+    animation:plat 1s linear 400ms normal;
+}
+
+@keyframes plat{
+    from{
+        transform:scaleY(0);
+        opacity: 0;
+    }
+    to{
+        transform:scaleY(1);
+        opacity: 1;
+    }
 }*/
-
-
 
 #menu p {
     margin:0;
@@ -558,7 +506,7 @@ footer li{
     justify-content: center;
     border-bottom: 2px solid #dbdbdb;
     width: 25px;
-    margin:0 auto 3%;
+    margin:0 auto 10%;
     padding-top: 17px;
     color: #dbdbdb;
 }
@@ -655,7 +603,7 @@ footer li{
     }
 
     .fa-hamburger{
-        top:40%;
+        top:41%;
     }
 
     .cards{
