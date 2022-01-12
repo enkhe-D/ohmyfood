@@ -142,19 +142,18 @@ input{
     animation:spin 200ms linear infinite;
 }
 
-.fa-hamburger {
+.fa-cocktail, .load-text{
+    color: #99E2D0;
+}
+
+.fa-cocktail {
     font-size: 52px;
     position: absolute;
-    top: 39%;
-    background: linear-gradient(to bottom, #f59e35 43%, #662f2f 70%, #f59e35 43%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    top: 41%;
 }
 
 .load-text{
     font-size: 29px;
-    color:whitesmoke
 }
 
 @keyframes loader {
@@ -572,10 +571,6 @@ footer li{
         position: relative;
         margin: 4% auto;
         width: 42%;
-    }
-
-    .fa-hamburger{
-        top:42%;
     }
 
     #menu{
