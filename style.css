@@ -121,7 +121,7 @@ input{
 
 .loader{
     visibility:hidden;
-    background-image:linear-gradient(#9356dcbd, #ff79dac7);
+    background-image:linear-gradient(rgb(147 86 220 / 78%), rgb(255 121 218 / 78%));
     position:fixed;
     z-index: 1;
     top:0;
