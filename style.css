@@ -314,9 +314,18 @@ p.news {
     margin: 9px 0 0px;
 }
 
-.menu{
+.animation-1{
+    transform-origin: 50% bottom;
+    animation:plat 1s linear 200ms normal;
+}
+.animation-2{
     transform-origin: 50% bottom;
     animation:plat 1s linear 400ms normal;
+}
+
+.animation-3{
+    transform-origin: 50% bottom;
+    animation:plat 1s linear 600ms normal;
 }
 
 @keyframes plat{
@@ -488,7 +497,7 @@ footer li{
     main,
     .function ul,
     #resto ul,
-    .animation,
+    .card,
     #menu ul{
         display: flex;
     }
@@ -550,7 +559,7 @@ footer li{
         padding:1% 3%;
     }
 
-    .animation{
+    .card{
         flex-direction: column;
     }
 
