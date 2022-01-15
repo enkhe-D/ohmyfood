@@ -296,6 +296,7 @@ p.news {
     border-radius: 3px;
 }
 
+
 #menu {
     position:relative;
     top: -67px;
@@ -489,24 +490,22 @@ footer li{
 
     main,
     .function ul,
-    #resto ul{
-        flex-wrap: wrap;
-    }
-
-    main,
-    .function ul,
     #resto ul,
     .card,
     #menu ul{
         display: flex;
     }
 
+    main,
+    .function ul,
+    #resto ul{
+        flex-wrap: wrap;
+    }
+
     header,
     .function,
     form,
     .cards,
-    .menu,
-    #menu li.menu-titre,
     footer,
     footer li{
         width:100%;
@@ -518,7 +517,7 @@ footer li{
     }
 
     .block-header{
-        margin: 2% 0 0; 
+        margin: 2% 0 0;
     }
 
     .menu-img img {
@@ -529,7 +528,8 @@ footer li{
     
 
     .btn, .btn:hover{
-        width:20%;
+        width:14%;
+        font-size: 18px;
     }
 
     .function,
@@ -586,12 +586,20 @@ footer li{
         border-radius: 0;
     }
 
+    .menu{
+        width:68%;
+    }
+
+    #menu li.menu-titre{
+        width: 68%;
+    }
+
     .menu-img{
         margin-bottom: 0;
     }
 
     #menu li h2{
-        margin:0;
+        margin:0 0 0 94px;
     }
 
     #menu .anim{
@@ -604,7 +612,7 @@ footer li{
     }
 
     p.news{
-        left:80%;
+        left:86%;
     }
 
     .icon-up{
@@ -616,12 +624,17 @@ footer li{
     }
 
     .icon-heart{
-        top:83%;
+        top:82%;
+        left:91%;
     }
 
     #menu .icon-heart {
         left: 91.5%;
         top:5%
+    }
+
+    figcaption h2 {
+        width: 100%;
     }
 
     .menu-footer {
@@ -630,7 +643,12 @@ footer li{
 
     footer ul{
         flex-wrap: nowrap;
-    } 
+    }
+
+    .icon-footer {
+        margin:0;
+        padding: 0 1% 0 0;
+    }
 }
 
 
