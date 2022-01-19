@@ -4,7 +4,7 @@ h1{
     font-family: 'Shrikhand', cursive;
 }
 
-.font h1, p, h2, h3, footer{
+.font h1,.nouveau, p, h2, h3, footer{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -66,14 +66,14 @@ form,
 
 .block-header,
 header form,
-input,
-p.news{
+input{
     text-align: center;
 }
 
 .header-cards,
 figcaption {
     justify-content: space-between;
+    width: 98%;
 }
 
 figcaption,
@@ -286,14 +286,16 @@ h1{
     margin:6% auto;
 }
 
-p.news {
-    background-color: #99E2D0;
+.nouveau::after {
+    content: 'Nouveau';
     color: green;
-    width: 81px;
-    position: absolute;
-    left: 68%;
-    padding: 5px;
+    border: 1px solid #99E2D0;
     border-radius: 3px;
+    background-color: #99E2D0;
+    position: absolute;
+    top: 8%;
+    left: 70%;
+    padding: 4px 11px;
 }
 
 
@@ -309,10 +311,17 @@ p.news {
     margin-bottom: 13%;
 }
 
-#menu h2 {
-    border-bottom: 3px solid #99E2D0;
-    width: 45px;
-    margin: 9px 0 0px;
+#menu h2{
+    position: relative;
+}
+
+#menu h2::before {
+    content: '';
+    position: absolute;
+    width: 47px;
+    height: 2px;
+    background-color: #99E2D0;
+    bottom: 0;
 }
 
 .animation-1{
@@ -436,7 +445,7 @@ figcaption{
 }
 
 figcaption h2{
-    width:90%;
+    width:100%;
 }
 
 #menu .btn {
@@ -525,12 +534,6 @@ footer li{
         margin-top: 1%;
         object-fit: cover;
     }
-    
-
-    .btn, .btn:hover{
-        width:14%;
-        font-size: 18px;
-    }
 
     .function,
     .header-cards,
@@ -586,10 +589,6 @@ footer li{
         border-radius: 0;
     }
 
-    .menu{
-        width:68%;
-    }
-
     #menu li.menu-titre{
         width: 68%;
     }
@@ -612,7 +611,7 @@ footer li{
     }
 
     p.news{
-        left:86%;
+        left:84%;
     }
 
     .icon-up{
@@ -628,13 +627,17 @@ footer li{
         left:91%;
     }
 
+    .menu *{
+        border:1px solid black;
+    }
+
     #menu .icon-heart {
         left: 91.5%;
         top:5%
     }
 
-    figcaption h2 {
-        width: 100%;
+    li.menu{
+        width:100%;
     }
 
     .menu-footer {
